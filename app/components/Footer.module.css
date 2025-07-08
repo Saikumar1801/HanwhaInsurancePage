@@ -1,0 +1,145 @@
+.contents {
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+}
+.div4 {
+  	position: relative;
+  	font-size: 15px;
+  	line-height: 150%;
+  	color: #808080;
+}
+.div {
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	flex-wrap: wrap;
+  	align-content: center;
+  	gap: 8px;
+  	font-size: 13px;
+}
+.contents5 {
+  	border: 1px solid #ccc;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 4px 8px;
+}
+.contentsParent {
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	gap: 8px;
+}
+.div26 {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+}
+.image27Icon {
+  	width: 31px;
+  	position: relative;
+  	max-height: 100%;
+  	object-fit: cover;
+}
+.image28Icon {
+  	width: 35px;
+  	position: relative;
+  	max-height: 100%;
+  	object-fit: cover;
+}
+.image29Icon {
+  	width: 34px;
+  	position: relative;
+  	max-height: 100%;
+  	object-fit: cover;
+}
+.image31Icon {
+  	width: 40px;
+  	position: relative;
+  	max-height: 100%;
+  	object-fit: cover;
+}
+.image32Icon {
+  	width: 46px;
+  	position: relative;
+  	max-height: 100%;
+  	object-fit: cover;
+}
+.image27Parent {
+  	border-right: 1px solid #e6e6e6;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 0px 24px 0px 0px;
+  	gap: 8px;
+}
+.image26Icon {
+  	position: absolute;
+  	bottom: 0px;
+  	left: 0px;
+  	width: 144px;
+  	height: 35px;
+  	object-fit: cover;
+}
+.div35 {
+  	position: absolute;
+  	top: 11px;
+  	left: 151px;
+  	line-height: 150%;
+}
+.image26Parent {
+  	width: 201px;
+  	position: relative;
+  	height: 35px;
+}
+.groupWrapper {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	padding: 0px 0px 0px 24px;
+}
+.frameParent {
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	font-size: 10px;
+  	font-family: Hanwha;
+}
+.hanwhaGeneralInsurance {
+  	position: relative;
+  	line-height: 150%;
+}
+.columns1 {
+  	width: 1000px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: flex-start;
+  	gap: 16px;
+}
+.footer {
+  	width: 100%;
+  	position: relative;
+  	background-color: #fff;
+  	border-top: 1px solid #e6e6e6;
+  	box-sizing: border-box;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 40px 0px;
+  	text-align: left;
+  	font-size: 12px;
+  	color: #4d4d4d;
+  	font-family: HanwhaGothic;
+}
+

@@ -1,0 +1,165 @@
+.headerMoChild {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+.logoIcon {
+  width: 121.9px;
+  position: relative;
+  max-height: 100%;
+  object-fit: cover;
+}
+.div {
+  position: relative;
+  line-height: 150%;
+  cursor: pointer;
+}
+.logoParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.headerMoInner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.headerMoItem {
+  width: 40px;
+  height: 40px;
+}
+.headerMo {
+  align-self: stretch;
+  background-color: #fff;
+  border-bottom: 1px solid #cdd1d5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  gap: 0px;
+}
+.moHeader {
+  align-self: stretch;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  opacity: 0.1;
+}
+.vectorIcon {
+  position: absolute;
+  height: 40%;
+  width: 66.5%;
+  top: 34.17%;
+  right: 16.83%;
+  bottom: 25.83%;
+  left: 16.67%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+.iconarrowDown {
+  width: 20px;
+  position: relative;
+  height: 20px;
+}
+.iconSize {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.title {
+  align-self: stretch;
+  background-color: #fff;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.wrapper {
+  border-bottom: 1px solid #ff6600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #ff6600;
+}
+.title1 {
+  align-self: stretch;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  gap: 8px;
+  font-size: 15px;
+  opacity: 1;
+  max-height: 500px;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+.title1Hidden {
+  opacity: 0;
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.div1 {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: center;
+  font-size: 17px;
+  color: #000;
+  font-family: HanwhaGothic;
+}
+.moHeaderParent {
+  position: absolute;
+  margin: 0 !important;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 10px;
+  color: #4d4d4d;
+  font-family: Hanwha;
+}
+.active {
+  color: #ff6600;
+  font-weight: bold;
+}

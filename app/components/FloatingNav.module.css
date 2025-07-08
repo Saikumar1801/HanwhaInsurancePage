@@ -1,0 +1,172 @@
+/* Base Styles */
+.floatingNavContainer {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.floatingNavContent {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12), 
+              0px 1px 4px rgba(0, 0, 0, 0.08), 
+              0px 0px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px;
+  gap: 16px;
+  position: relative;
+}
+
+/* Navigation Items */
+.navItems {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.navItem {
+  border-radius: 125.71px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.navItem:hover {
+  background-color: #f5f5f5;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.label {
+  position: relative;
+  line-height: 150%;
+  font-size: 13px;
+  color: #4d4d4d;
+  font-family: HanwhaGothic;
+  white-space: nowrap;
+}
+
+.divider {
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+}
+
+.yesecoLink {
+  border-radius: 99px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  font-size: 13px;
+  color: #808080;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.yesecoContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 61.6px;
+  height: 13.8px;
+}
+
+.linkText {
+  font-size: 13px;
+  color: #4d4d4d;
+}
+
+/* Mobile Toggle Button */
+.floatingButton {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #ff6600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  cursor: pointer;
+  border: none;
+  display: none;
+}
+
+/* Mobile Close Button */
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  padding: 0;
+  display: none;
+}
+
+/* Mobile Behavior */
+@media (max-width: 768px) {
+  .floatingButton {
+    display: flex;
+  }
+  
+  .closeButton {
+    display: block;
+  }
+  
+  .floatingNavContainer.mobile {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .floatingNavContainer.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  .floatingNavContent {
+    padding-top: 40px; /* Extra space for close button */
+  }
+}
