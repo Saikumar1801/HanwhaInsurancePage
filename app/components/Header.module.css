@@ -313,12 +313,12 @@
 }
 .mainMenuButton {
   all: unset;
+  cursor: pointer;/*
   font-weight: bold;
   font-size: 19px;
   line-height: 150%;
-  cursor: pointer;
   font-family: 'Noto Sans KR';
-  color: inherit;
+  color: inherit;*/
 }
 
 .iconButton {
@@ -395,4 +395,8 @@
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   background: transparent;
   cursor: pointer;
+}
+.menuImage {
+  display: block; /* Prevents extra space under the image inside the button */
+  object-fit: contain; /* Ensures the image scales nicely */
 }

@@ -1,11 +1,6 @@
-// app/layout.tsx
-
 import './globals.css';
 import type { Metadata } from 'next';
-import ResponsiveHeader from './components/ResponsiveHeader';
-import ResponsiveFooter from './components/ResponsiveFooter';
-import FloatingNav from './components/FloatingNav';
-import { ZoomProvider } from './components/ZoomContext'; // adjust the path if needed
+import AppContainer from './components/AppContainer'; // Import our new component
 
 export const metadata: Metadata = {
   title: '한화손해보험',
@@ -20,12 +15,11 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning={true}>
       <body style={{ position: 'relative' }}>
-        <ZoomProvider>
-          <ResponsiveHeader />
-          <main>{children}</main>
-          <ResponsiveFooter />
-          <FloatingNav />
-        </ZoomProvider>
+        {/*
+          We replace the list of components with our single AppContainer.
+          It handles the header, footer, and zoom logic internally.
+        */}
+        <AppContainer>{children}</AppContainer>
       </body>
     </html>
   );

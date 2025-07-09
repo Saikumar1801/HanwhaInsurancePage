@@ -81,27 +81,19 @@ const Content = () => {
         {/* Contact Section */}
         <div className={styles.parent}>
           <div className={styles.div1}>
-            <div className={styles.iconexlightcallingParent}>
-              <Image 
-                className={styles.adobestock511441298RemovebgIcon} 
-                width={119.6} 
-                height={100} 
-                sizes="100vw" 
-                alt="연락처 아이콘" 
-                src="/Contact.png" 
-              />
-              <div className={styles.frameGroup}>
-                <div className={styles.wrapper}>
-                  <div className={styles.div2}>한화손해보험 관악사업소</div>
-                </div>
-                <div className={styles.container}>
-                  <div className={styles.div}>담당자 : 정태영 소장</div>
-                </div>
-                <div className={styles.tobegonavercomWrapper}>
-                  <div className={styles.div}>연락처 02-3395-7180 / 이메일 tobego@naver.com</div>
-                </div>
-              </div>
-            </div>
+            {/* ==================== START: REPLACEMENT ==================== */}
+            {/* The old detailed structure is replaced by this single Image component. */}
+            {/* Make sure to use the correct src, width, and height for your image. */}
+            <Image
+              className={styles.contactInfoImage}
+              width={578} // Replace with your image's actual width
+              height={80} // Replace with your image's actual height
+              sizes="(max-width: 768px) 60vw, 40vw"
+              alt="한화손해보험 관악사업소 연락처 정보"
+              src="/1Contactlayer.png" // Replace with your image's path
+            />
+            {/* ===================== END: REPLACEMENT ===================== */}
+            
             <div className={styles.frame}>
               <div 
                 className={styles.div}

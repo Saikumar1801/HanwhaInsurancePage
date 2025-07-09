@@ -33,7 +33,13 @@
    ========================================================================== */
 .content {
   width: 100%;
-  max-width: 1000px;
+  
+  /* ============ KEY CHANGE #1 ============ */
+  /* Increase max-width for a wider desktop layout.
+     1440px is a common standard, but you can choose another value like 1280px or 1600px. */
+  max-width: 1440px; 
+  /* ======================================= */
+
   margin: 0 auto;
   padding: 0 24px;
   box-sizing: border-box;
@@ -46,6 +52,13 @@
 }
 .frameParent {
   width: 100%;
+  
+  /* ============ KEY CHANGE #2 ============ */
+  /* We will let the images inside decide their own width, up to 1000px.
+     This container will simply center them. */
+  max-width: 985px; /* This keeps your image content from stretching too far. */
+  /* ======================================= */
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +71,7 @@
 }
 
 /* ==========================================================================
-   Contact Card Section (Preserved Original Styles)
+   Contact Card Section (Modified for Image)
    ========================================================================== */
 .parent {
   align-self: stretch;
@@ -83,64 +96,16 @@
   padding: 24px 32px;
   gap: 20px;
 }
-.iconexlightcallingParent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 32px;
+
+.contactInfoImage {
+  flex: 1;
   min-width: 0;
-}
-.adobestock511441298RemovebgIcon {
-  width: 100px;
+  max-width: 100%;
   height: auto;
-  position: relative;
   object-fit: contain;
-  flex-shrink: 0;
+  object-position: left;
 }
-.frameGroup {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 10px;
-}
-.div2 {
-  position: relative;
-  line-height: 120%;
-  font-size: 30px;
-  font-family: Hanwha, sans-serif;
-  /* FIX: Ensures this text never wraps */
-  white-space: nowrap;
-}
-.wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-/* FIX: Added rule to prevent text wrapping inside these elements */
-.container .div, .wrapper .div, .tobegonavercomWrapper .div {
-    white-space: nowrap;
-}
-.tobegonavercomWrapper {
-  background-color: #f8f8fa;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
-  color: #ff6600;
-  border-radius: 4px;
-}
+
 .frame {
   border-radius: 99px;
   background-color: #fff7f2;
@@ -151,7 +116,6 @@
   justify-content: center;
   padding: 24px 32px;
   font-size: 17.61px;
-  /* FIX: Ensures button text never wraps */
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -184,7 +148,6 @@
   border-color: #ff6600;
   color: #fff;
 }
-/* FIX: Changed from word-break to nowrap to strictly prevent wrapping */
 .wrapper2 .div, .wrapper3 .div {
   white-space: nowrap;
 }
@@ -204,19 +167,11 @@
    ========================================================================== */
 @media (max-width: 768px) {
   .div1 { padding: 16px; gap: 10px; }
-  .iconexlightcallingParent { gap: 12px; }
-  .adobestock511441298RemovebgIcon { width: 60px; }
-  .div2 { font-size: 18px; }
-  .parent { font-size: 14px; }
   .frame { padding: 12px 16px; font-size: 14px; }
   .tab { font-size: 12px; }
 }
 @media (max-width: 480px) {
   .content { padding: 0 16px; }
-  .div2 { font-size: 14px; }
-  .parent { font-size: 12px; }
-  .adobestock511441298RemovebgIcon { width: 40px; }
   .frame { padding: 10px 12px; font-size: 12px; }
-  .iconexlightcallingParent { gap: 8px; }
   .tab { font-size: 10px; }
 }
