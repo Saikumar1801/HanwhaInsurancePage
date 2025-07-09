@@ -3,13 +3,14 @@
 
 .pageContainer {
   width: 100%;
-  overflow-x: auto;
+  /* Prevent any accidental horizontal scrolling */
+  overflow-x: hidden; 
   min-height: 100vh;
   background-color: #fff;
 }
 
 .mainContainer {
-  min-width: 1200px;
+  /* REMOVED: min-width: 1200px; This was the problem */
   width: 100%;
   display: flex;
   flex-direction: column;

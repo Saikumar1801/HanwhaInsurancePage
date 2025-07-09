@@ -1,19 +1,25 @@
+/* MOHeader.module.css - FINAL VERSION */
+
 .headerMoChild {
   width: 40px;
   height: 40px;
   object-fit: cover;
+  cursor: pointer;
 }
+
 .logoIcon {
   width: 121.9px;
   position: relative;
   max-height: 100%;
   object-fit: cover;
 }
+
 .div {
   position: relative;
   line-height: 150%;
   cursor: pointer;
 }
+
 .logoParent {
   display: flex;
   flex-direction: row;
@@ -21,6 +27,7 @@
   justify-content: flex-start;
   gap: 4px;
 }
+
 .headerMoInner {
   flex: 1;
   display: flex;
@@ -28,10 +35,13 @@
   align-items: center;
   justify-content: center;
 }
+
 .headerMoItem {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
+
 .headerMo {
   align-self: stretch;
   background-color: #fff;
@@ -42,7 +52,9 @@
   justify-content: space-between;
   padding: 8px;
   gap: 0px;
+  transition: box-shadow 0.3s ease;
 }
+
 .moHeader {
   align-self: stretch;
   background-color: #fff;
@@ -50,7 +62,11 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  z-index: 100;
 }
+
 .container {
   position: absolute;
   height: 100%;
@@ -61,6 +77,7 @@
   left: 0%;
   opacity: 0.1;
 }
+
 .vectorIcon {
   position: absolute;
   height: 40%;
@@ -73,27 +90,40 @@
   overflow: hidden;
   max-height: 100%;
   object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: invert(55%) sepia(87%) saturate(2406%) hue-rotate(359deg) brightness(101%) contrast(101%);
+  /* Default (closed) state: points left-down */
+  transform: rotate(-90deg);
 }
+
+.rotate {
+  /* Open state: points right-down */
+  transform: rotate(90deg);
+}
+
 .iconarrowDown {
   width: 20px;
   position: relative;
   height: 20px;
 }
+
 .iconSize {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
+
 .parent {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 8px;
 }
+
 .title {
-  align-self: stretch;
+  width: 100%;
   background-color: #fff;
   height: 50px;
   display: flex;
@@ -103,7 +133,9 @@
   padding: 12px 16px;
   box-sizing: border-box;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
 .wrapper {
   border-bottom: 1px solid #ff6600;
   display: flex;
@@ -112,8 +144,9 @@
   justify-content: center;
   color: #ff6600;
 }
+
 .title1 {
-  align-self: stretch;
+  width: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -125,25 +158,51 @@
   opacity: 1;
   max-height: 500px;
   overflow: hidden;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    max-height 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 101;
 }
+
+.title1 > div {
+  /* width: 100%; <-- REMOVED this line */
+  padding: 12px 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+}
+
+.title1 > div:hover {
+  background-color: #f9f9f9;
+}
+
 .title1Hidden {
   opacity: 0;
   max-height: 0;
   padding: 0;
   overflow: hidden;
+  box-shadow: none;
 }
+
 .div1 {
-  width: 360px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   text-align: center;
   font-size: 17px;
   color: #000;
   font-family: HanwhaGothic;
+  position: relative;
+  z-index: 100;
 }
+
 .moHeaderParent {
   position: absolute;
   margin: 0 !important;
@@ -152,14 +211,55 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   text-align: left;
   font-size: 10px;
   color: #4d4d4d;
   font-family: Hanwha;
 }
+
+/* NEW 'active' STYLES */
 .active {
   color: #ff6600;
   font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding: 12px 0 10px 0;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6600;
+}
+
+
+.headerShadow .headerMo,
+.headerShadow .moHeader,
+.headerShadow .div1 {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  backdrop-filter: blur(2px);
+}
+
+.headerContainer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

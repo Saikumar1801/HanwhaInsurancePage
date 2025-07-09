@@ -1,0 +1,141 @@
+.div {
+  position: relative;
+  line-height: 150%;
+}
+.a {
+  position: relative;
+  line-height: 150%;
+  color: inherit;
+  text-decoration: none;
+}
+.contents {
+  flex: 1;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 6px;
+}
+.columns1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.contents4 {
+  flex: 1;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+}
+.contents5 {
+  flex: 1;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  color: #4d4d4d;
+}
+.div20 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 6px 8px;
+}
+.span2 {
+  color: #4d4d4d;
+}
+.span3 {
+  color: #ff6600;
+}
+.copyright {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 19px;
+}
+.contents6 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.div26 {
+  position: relative;
+  line-height: 150%;
+  color: #808080;
+}
+.div24 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 0px 9px;
+}
+.copyright1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 9px;
+  color: #4d4d4d;
+}
+.parent5 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+  font-size: 10px;
+}
+.columns11 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 16px;
+  gap: 12px;
+}
+.content1 {
+  align-self: stretch;
+  background-color: #f8f8fa;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0px 0px 16px;
+  gap: 12px;
+}
+.footerMo {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 3;
+  font-size: 11px;
+}

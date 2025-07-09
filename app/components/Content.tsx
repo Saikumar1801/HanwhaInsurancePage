@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import Image from "next/image";
 import styles from './Content.module.css';
+import ApplicationModal from './ApplicationModal';
 
 const Content = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
   const TABS = [
     {
@@ -48,6 +50,9 @@ const Content = () => {
 
   return (
     <div className={styles.content}>
+      {/* Application Modal */}
+      <ApplicationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      
       <div className={styles.frameParent}>
         <div className={styles.titleParent}>
           <div className={styles.title}>
@@ -58,8 +63,9 @@ const Content = () => {
             width={1000} 
             height={218} 
             sizes="100vw" 
-            alt="" 
+            alt="나눔의행복 헤로 이미지" 
             src="/Hero.png" 
+            priority
           />
         </div>
         
@@ -68,7 +74,7 @@ const Content = () => {
           width={1000} 
           height={976} 
           sizes="100vw" 
-          alt="" 
+          alt="상품 정보 이미지" 
           src="/ProductInfo.png" 
         />
         
@@ -81,7 +87,7 @@ const Content = () => {
                 width={119.6} 
                 height={100} 
                 sizes="100vw" 
-                alt="" 
+                alt="연락처 아이콘" 
                 src="/Contact.png" 
               />
               <div className={styles.frameGroup}>
@@ -97,7 +103,11 @@ const Content = () => {
               </div>
             </div>
             <div className={styles.frame}>
-              <div className={styles.div}>
+              <div 
+                className={styles.div}
+                onClick={() => setIsModalOpen(true)}
+                style={{ cursor: 'pointer' }}
+              >
                 <span>
                   <span>{`「나눔의 행복」 `}</span>
                   <span className={styles.span}>{`가입신청  `}</span>
@@ -132,7 +142,7 @@ const Content = () => {
               width={img.width}
               height={img.height}
               sizes="100vw"
-              alt=""
+              alt={`${TABS[activeTab].label} 설명 이미지 ${i+1}`}
               src={`/${img.src}`}
             />
           ))}

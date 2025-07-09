@@ -1,8 +1,14 @@
+/* ==========================================================================
+   Base Styles from Your Original CSS
+   ========================================================================== */
 .div {
   position: relative;
   line-height: 150%;
 }
-
+.span {
+  white-space: pre-wrap;
+  color: #ff6600;
+}
 .title {
   align-self: stretch;
   display: flex;
@@ -10,16 +16,6 @@
   align-items: flex-start;
   justify-content: center;
 }
-
-.icon {
-  align-self: stretch;
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-}
-
 .titleParent {
   align-self: stretch;
   display: flex;
@@ -32,86 +28,48 @@
   color: #ff6600;
 }
 
-.image1799Icon {
-  width: 1000px;
-  position: relative;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-.adobestock511441298RemovebgIcon {
-  width: 119.6px;
-  position: relative;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-.div2 {
-  position: relative;
-  line-height: 120%;
-  font-size: 30px;
-  font-family: Hanwha;
-}
-
-.wrapper {
+/* ==========================================================================
+   Main Layout & Images (Made Responsive)
+   ========================================================================== */
+.content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0px 16px;
+  font-family: HanwhaGothic, sans-serif;
+  color: #000;
+  text-align: left;
 }
-
-.container {
+.frameParent {
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 0px 16px;
+}
+.icon, .image1799Icon {
+  width: 100%;
+  height: auto;
+  position: relative;
+  object-fit: contain;
 }
 
-.tobegonavercomWrapper {
-  background-color: #f8f8fa;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0px 16px;
-  color: #ff6600;
-}
-
-.frameGroup {
+/* ==========================================================================
+   Contact Card Section (Preserved Original Styles)
+   ========================================================================== */
+.parent {
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  padding: 0px 0px 50px;
   gap: 10px;
+  font-size: 19px;
 }
-
-.iconexlightcallingParent {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 32px;
-}
-
-.span {
-  white-space: pre-wrap;
-  color: #ff6600;
-}
-
-.frame {
-  border-radius: 99px;
-  background-color: #fff7f2;
-  border: 1px solid #ff6600;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 24px 32px;
-  font-size: 17.61px;
-}
-
 .div1 {
   align-self: stretch;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12), 
@@ -123,84 +81,142 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px 32px;
-  gap: 0px;
+  gap: 20px;
 }
-
-.parent {
-  align-self: stretch;
+.iconexlightcallingParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  min-width: 0;
+}
+.adobestock511441298RemovebgIcon {
+  width: 100px;
+  height: auto;
+  position: relative;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.frameGroup {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 0px 0px 50px;
   gap: 10px;
-  font-size: 19px;
 }
-
-.wrapper2 {
-  flex: 1;
-  background-color: #ff6600;
+.div2 {
+  position: relative;
+  line-height: 120%;
+  font-size: 30px;
+  font-family: Hanwha, sans-serif;
+  /* FIX: Ensures this text never wraps */
+  white-space: nowrap;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+/* FIX: Added rule to prevent text wrapping inside these elements */
+.container .div, .wrapper .div, .tobegonavercomWrapper .div {
+    white-space: nowrap;
+}
+.tobegonavercomWrapper {
+  background-color: #f8f8fa;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  color: #ff6600;
+  border-radius: 4px;
+}
+.frame {
+  border-radius: 99px;
+  background-color: #fff7f2;
   border: 1px solid #ff6600;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 19px 8px;
-  color: #fff;
-  cursor: pointer;
+  padding: 24px 32px;
+  font-size: 17.61px;
+  /* FIX: Ensures button text never wraps */
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.wrapper3 {
-  flex: 1;
+/* ==========================================================================
+   Tab Navigation & Content (Made Responsive)
+   ========================================================================== */
+.tab {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  font-size: 16px;
   border: 1px solid #e6e6e6;
+  border-left: none;
+}
+.wrapper2, .wrapper3 {
+  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 19px 8px;
   cursor: pointer;
+  border-left: 1px solid #e6e6e6;
 }
-
-.tab {
-  width: 1000px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0px;
-  max-width: 1000px;
-  font-size: 16px;
+.wrapper2 {
+  background-color: #ff6600;
+  border-color: #ff6600;
+  color: #fff;
 }
-
+/* FIX: Changed from word-break to nowrap to strictly prevent wrapping */
+.wrapper2 .div, .wrapper3 .div {
+  white-space: nowrap;
+}
 .image1795Parent {
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   padding: 0px 16px 64px;
   box-sizing: border-box;
   gap: 64px;
 }
 
-.frameParent {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+/* ==========================================================================
+   Mobile "Shrink-to-Fit" Styles
+   ========================================================================== */
+@media (max-width: 768px) {
+  .div1 { padding: 16px; gap: 10px; }
+  .iconexlightcallingParent { gap: 12px; }
+  .adobestock511441298RemovebgIcon { width: 60px; }
+  .div2 { font-size: 18px; }
+  .parent { font-size: 14px; }
+  .frame { padding: 12px 16px; font-size: 14px; }
+  .tab { font-size: 12px; }
 }
-
-.content {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0px 360px;
-  box-sizing: border-box;
-  text-align: left;
-  font-size: 24px;
-  color: #000;
-  font-family: HanwhaGothic;
+@media (max-width: 480px) {
+  .content { padding: 0 16px; }
+  .div2 { font-size: 14px; }
+  .parent { font-size: 12px; }
+  .adobestock511441298RemovebgIcon { width: 40px; }
+  .frame { padding: 10px 12px; font-size: 12px; }
+  .iconexlightcallingParent { gap: 8px; }
+  .tab { font-size: 10px; }
 }

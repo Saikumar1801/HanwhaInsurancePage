@@ -1,5 +1,4 @@
 "use client";
-
 import Content from './components/Content';
 import styles from './page.module.css';
 
@@ -12,3 +11,4 @@ export default function FullInsurancePage() {
     </div>
   );
 }
+

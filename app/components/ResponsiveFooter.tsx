@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Footer from './Footer';        // Desktop Footer
-import FooterMo from './FooterMo';    // Mobile Footer
+import FooterMo from './MOFooter';    // Mobile Footer
 
 const ResponsiveFooter = () => {
   const [isMobile, setIsMobile] = useState(false);

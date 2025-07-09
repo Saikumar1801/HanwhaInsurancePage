@@ -1,172 +1,138 @@
 /* Base Styles */
-.floatingNavContainer {
+.floatingNav {
   position: fixed;
-  right: 20px;
   top: 50%;
-  transform: translateY(-50%);
-  z-index: 1000;
-  transition: all 0.3s ease;
+  right: 0;
+  transform: translateY(-50%); /* Base vertical centering */
+  z-index: 999;
+  display: flex; /* Use flexbox to align handle and content side-by-side */
+  align-items: center;
+  transition: transform 0.3s ease-in-out; /* Animate the slide effect */
 }
 
-.floatingNavContent {
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12), 
-              0px 1px 4px rgba(0, 0, 0, 0.08), 
-              0px 0px 1px rgba(0, 0, 0, 0.08);
+.contentWrapper {
+  width: 100px;
+  background-color: #ffffff;
   border-radius: 20px;
-  background-color: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 16px;
-  gap: 16px;
+  padding: 20px 0;
+  gap: 25px;
   position: relative;
 }
 
-/* Navigation Items */
+.handleButton {
+  /* This defines the handle's appearance and size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 90px; /* The requested taller height */
+  background-color: #f97316;
+  color: white;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  box-shadow: -2px 2px 8px rgba(0,0,0,0.15);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  z-index: 1;
+}
+
 .navItems {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: center;
+  gap: 25px;
   width: 100%;
 }
 
 .navItem {
-  border-radius: 125.71px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  gap: 8px;
   text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+  width: 100%;
 }
 
 .navItem:hover {
-  background-color: #f5f5f5;
-}
-
-.itemContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-}
-
-.label {
-  position: relative;
-  line-height: 150%;
-  font-size: 13px;
-  color: #4d4d4d;
-  font-family: HanwhaGothic;
-  white-space: nowrap;
+  color: #f97316;
 }
 
 .divider {
-  width: 100%;
-  border-top: 1px solid #e6e6e6;
-}
-
-.yesecoLink {
-  border-radius: 99px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-  font-size: 13px;
-  color: #808080;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.yesecoContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  width: 60%;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 10px 0;
 }
 
 .logoWrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.logo {
-  width: 61.6px;
-  height: 13.8px;
-}
-
-.linkText {
-  font-size: 13px;
-  color: #4d4d4d;
-}
-
-/* Mobile Toggle Button */
-.floatingButton {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 56px;
-  height: 56px;
-  background-color: #ff6600;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1001;
-  cursor: pointer;
-  border: none;
-  display: none;
-}
-
-/* Mobile Close Button */
-.closeButton {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 24px;
-  height: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1;
-  padding: 0;
-  display: none;
-}
-
-/* Mobile Behavior */
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .floatingButton {
-    display: flex;
+  /* By default, move the entire container off-screen by the width of the content panel */
+  .floatingNav {
+    /* 100px is the width of .contentWrapper */
+    transform: translateY(-50%) translateX(100px);
   }
-  
+
+  /* When expanded, slide the whole container back to be flush with the right edge */
+  .floatingNav.expanded {
+    transform: translateY(-50%) translateX(0);
+  }
+
+  /* Use flexbox `order` to place the handle to the left of the content panel. */
+  /* This is crucial for the handle to be visible when the container is shifted. */
+  .contentWrapper {
+    order: 2;
+  }
+  .handleButton {
+    order: 1;
+  }
+
   .closeButton {
-    display: block;
+    display: block; /* Show close button on mobile */
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  /* On desktop, it's always fully visible at the edge */
+  .floatingNav {
+    transform: translateY(-50%) translateX(0);
   }
   
-  .floatingNavContainer.mobile {
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+  /* Hide the mobile-only handle and close buttons on desktop */
+  .handleButton, .closeButton {
+    display: none !important;
   }
-  
-  .floatingNavContainer.hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+
+  /* Reset the flexbox order on desktop */
+  .contentWrapper {
+    order: initial;
   }
-  
-  .floatingNavContent {
-    padding-top: 40px; /* Extra space for close button */
+  .handleButton {
+    order: initial;
   }
 }

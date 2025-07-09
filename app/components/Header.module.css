@@ -256,3 +256,143 @@
   	font-family: 'Noto Sans KR';
 }
 
+/* Zoom input */
+.searchInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-family: HanwhaGothic;
+  background-color: transparent;
+}
+
+/* Dropdown styles */
+.dropdownPanel {
+  position: absolute;
+  top: 132px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e9ecef;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 990;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdownContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.dropdownLink {
+  color: #555;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+
+.dropdownLink:hover {
+  color: #f97316;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.mainMenuButton {
+  all: unset;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 150%;
+  cursor: pointer;
+  font-family: 'Noto Sans KR';
+  color: inherit;
+}
+
+.iconButton {
+  all: unset;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdownPanel {
+  position: absolute;
+  top: 132px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e9ecef;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 990;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.dropdownContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.dropdownLink {
+  all: unset;
+  font-size: 16px;
+  color: #555;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.dropdownLink:hover {
+  color: #f97316;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-family: HanwhaGothic;
+  background-color: transparent;
+}
+
+.breadcrumbAtomic {
+  all: unset;
+  display: flex;
+  align-items: center;
+  padding: 0px 24px;
+  gap: 4px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  cursor: pointer;
+}
