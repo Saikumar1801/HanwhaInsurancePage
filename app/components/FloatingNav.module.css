@@ -10,6 +10,7 @@
   transition: transform 0.3s ease-in-out; /* Animate the slide effect */
 }
 
+
 .contentWrapper {
   width: 100px;
   background-color: #ffffff;
@@ -29,7 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
+  width: 20px;
   height: 90px; /* The requested taller height */
   background-color: #f97316;
   color: white;
