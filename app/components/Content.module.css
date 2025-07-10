@@ -112,12 +112,14 @@
   white-space: nowrap;
   flex-shrink: 1;
 
-  /* Default (Desktop) font sizing */
-  --base-font-size: clamp(4px, 2.5vw, 15.61px);
-  font-size: min(var(--base-font-size), 13px);
+  /* Slightly decreased again */
+  --base-font-size: clamp(10px, 2.5vw, 18px);
+  font-size: min(var(--base-font-size), 16px);
 
   padding: clamp(10px, 2.5vw, 24px) clamp(16px, 3.5vw, 32px);
 }
+
+
 
 /* Mobile-specific overrides */
 @media (max-width: 768px) {

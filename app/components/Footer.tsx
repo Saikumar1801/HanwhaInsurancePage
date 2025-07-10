@@ -95,7 +95,7 @@ const Footer:NextPage = () => {
           					</div>
           					<div className={styles.groupWrapper}>
             						<div className={styles.image26Parent}>
-              							<Image className={styles.image26Icon} width={144} height={35} sizes="100vw" alt="" src="/Flogo.png" />
+              							<Image className={styles.image26Icon} width={144} height={35} sizes="100vw" alt="" src="/logos/Flogo.png" />
               							<div className={styles.div35}>관악사업소</div>
             						</div>
           					</div>
