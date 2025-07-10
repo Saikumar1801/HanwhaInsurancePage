@@ -101,8 +101,8 @@ const Content = () => {
                 style={{ cursor: 'pointer' }}
               >
                 <span>
-                  <span>{`「나눔의 행복」 `}</span>
-                  <span className={styles.span}>{`가입신청  `}</span>
+                  <span>{`「나눔의 행복」`}</span>
+                  <span style={{ fontWeight: '900 !important', WebkitTextStroke: '0px' }}>{`가입신청  `}</span>
                 </span>
                 <span className={styles.span}>
                   <span>{`>`}</span>

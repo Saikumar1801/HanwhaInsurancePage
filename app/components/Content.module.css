@@ -187,7 +187,11 @@
   box-sizing: border-box;
   gap: 64px;
 }
-
+.extraBold {
+  font-weight: 900 !important;
+  -webkit-text-stroke: 0px;
+  text-stroke: 0px;
+}
 /* ==========================================================================
    Mobile Styles (Simplified)
    ========================================================================== */
