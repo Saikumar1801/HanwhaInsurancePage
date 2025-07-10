@@ -105,7 +105,7 @@ const Header: NextPage = () => {
               <div className={styles.mainMenuBarAtomicPc4}>
                 <input
                   type="text"
-                  placeholder="검색어 입력"
+                  placeholder="마이페이지"
                   className={styles.searchInput}
                 />
               </div>

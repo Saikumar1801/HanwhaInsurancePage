@@ -400,3 +400,13 @@
   display: block; /* Prevents extra space under the image inside the button */
   object-fit: contain; /* Ensures the image scales nicely */
 }
+.mainMenuBarAtomicPc5 {
+  background-color: #f97316; /* This is the orange color from your image */
+  color: white;
+  padding: 8px 20px;
+  cursor: pointer;
+  border-radius: 4px; /* Optional: adds slightly rounded corners */
+  border: none; /* This line removes the black border */
+  font-size: 16px; /* Adjust font size as needed */
+  font-weight: 500;
+}
